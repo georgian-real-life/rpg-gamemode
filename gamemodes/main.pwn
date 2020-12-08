@@ -45,6 +45,7 @@ const AIM_SYNC = 203;
 const BULLET_SYNC = 206;
 const SPECTATING_SYNC = 212;
 const WEAPONS_UPDATE_SYNC = 204;
+
 // IPacket:PLAYER_SYNC(playerid, BitStream:bs)
 // {
 // 	new onFootData[PR_OnFootSync];
