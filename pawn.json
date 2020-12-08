@@ -1,0 +1,121 @@
+{
+	"user": "Bronzal",
+	"repo": "melbourne-gamemode",
+	"entry": "gamemodes/main.pwn",
+	"output": "gamemodes/gamemode.amx",
+	"dependencies": [
+		"sampctl/samp-stdlib",
+		"pawn-lang/YSI-Includes@5.x",
+		"pBlueG/SA-MP-MySQL:R41-4",
+		"maddinat0r/sscanf:v2.8.3",
+		"katursis/Pawn.Regex:1.1.2",
+		"katursis/Pawn.CMD:3.3.3",
+		"katursis/Pawn.RakNet:1.4.1",
+		"bmisiak/samp-precise-timers:v2.0.2",
+		"oscar-broman/SKY:2.3.0",
+		"oscar-broman/samp-weapon-config",
+		"IllidanS4/YSF:v2.1",
+		"Sreyas-Sreelal/samp-bcrypt:0.2.3",
+		"AGraber/samp-compat:1.0.2"
+	],
+	"dev_dependencies": [
+		"Zeex/samp-plugin-crashdetect:v4.19.4",
+		"Zeex/samp-plugin-profiler:v2.15.3",
+		"samp-incognito/samp-streamer-plugin:v2.9.4"
+	],
+	"local": true,
+	"runtime": {
+		"version": "0.3.7",
+		"mode": "server",
+		"echo": "-",
+		"rcon_password": "rconPasswordGoesHere",
+		"port": 7777,
+		"hostname": "SA-MP Server",
+		"maxplayers": 350,
+		"language": "Georgian",
+		"mapname": "San Andreas",
+		"weburl": "www.sa-mp.com",
+		"gamemodetext": "Unknown",
+		"announce": true,
+		"lanmode": false,
+		"query": true,
+		"rcon": false,
+		"logqueries": false,
+		"sleep": 5,
+		"maxnpc": 0,
+		"stream_rate": 1000,
+		"stream_distance": 250,
+		"onfoot_rate": 30,
+		"incar_rate": 40,
+		"weapon_rate": 30,
+		"chatlogging": false,
+		"timestamp": true,
+		"messageholelimit": 3000,
+		"messageslimit": 500,
+		"ackslimit": 4000,
+		"playertimeout": 10000,
+		"minconnectiontime": 0,
+		"lagcompmode": 1,
+		"connseedtime": 300000,
+		"db_logging": false,
+		"db_log_queries": false,
+		"conncookies": false,
+		"cookielogging": false,
+		"output": true
+	},
+	"builds": [
+		{
+			"name": "production",
+			"args": [
+				"-;+",
+				"-(+",
+				"-\\+",
+				"-d2",
+				"-t4",
+				"-Z+",
+				"-E+"
+			],
+			"compiler": {}
+		},
+		{
+			"name": "list",
+			"args": [
+				"-;+",
+				"-(+",
+				"-\\+",
+				"-d2",
+				"-t4",
+				"-Z+",
+				"-E+",
+				"-l"
+			],
+			"compiler": {}
+		},
+		{
+			"name": "warnings",
+			"args": [
+				"-;+",
+				"-(+",
+				"-\\+",
+				"-d2",
+				"-t4",
+				"-Z+"
+			],
+			"compiler": {}
+		},
+		{
+			"name": "file",
+			"args": [
+				"-;+",
+				"-(+",
+				"-\\+",
+				"-d2",
+				"-t4",
+				"-Z+",
+				"-E+",
+				"-e..errors.list"
+			],
+			"compiler": {}
+		}
+	]
+}
