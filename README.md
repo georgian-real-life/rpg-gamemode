@@ -5,3 +5,4 @@
 | სახელი                                |
 | ------------------------------------- |
 | [Bronzal](https://github.com/Bronzal) |
+| [Medzvel](https://github.com/medzvel) |
