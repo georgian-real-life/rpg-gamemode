@@ -251,12 +251,12 @@ public Timer_AC_OneSecondTimer(playerid)
 	return true;
 }
 
-// hook OnUnoccupiedVehicleUpdate(vehicleid, playerid, passenger_seat, Float:new_x, Float:new_y, Float:new_z, Float:vel_x, Float:vel_y, Float:vel_z) // Mankanebs Ro krian e magi.
-// {
-// 	if(floatcmp(new_x, new_x) != 0 || floatcmp(new_y, new_y) != 0 || floatcmp(new_z, new_z) != 0) return 0;
+DEFINE_HOOK_REPLACEMENT__(OnUnoccupiedVehicleUpdate, OnUnoccupiedVU );
+hook OnUnoccupiedVehicleUpdate(vehicleid, playerid, passenger_seat, Float:new_x, Float:new_y, Float:new_z, Float:vel_x, Float:vel_y, Float:vel_z) // Mankanebs Ro krian e magi.
+{
+	if(floatcmp(new_x, new_x) != 0 || floatcmp(new_y, new_y) != 0 || floatcmp(new_z, new_z) != 0) return 0;
 
-// 	if(GetVehicleDistanceFromPoint(vehicleid, new_x, new_y, new_z) > 10.0) return 0;
+	if(GetVehicleDistanceFromPoint(vehicleid, new_x, new_y, new_z) > 10.0) return 0;
 
-// 	return 1;
-
-// }
+	return 1;
+}
